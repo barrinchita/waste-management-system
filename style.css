@@ -220,3 +220,109 @@ footer {
         cursor: pointer;
     }
 }
+
+/* register page styling */
+
+/* Register Page Styles */
+.register-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.register-container h2 {
+    color: #005A34;
+}
+
+.register-container p {
+    color: #333;
+}
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.google-btn, .facebook-btn, .twitter-btn {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.google-btn {
+    background-color: #db4437;
+}
+
+.facebook-btn {
+    background-color: #1877f2;
+}
+
+.twitter-btn {
+    background-color: #1da1f2;
+}
+
+/* Divider */
+.divider {
+    margin: 15px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Form Inputs */
+
+form input {
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #005A34;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.register-btn:hover {
+    background-color: #008C5E;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: #005A34;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        width: 95%;
+    }
+}
