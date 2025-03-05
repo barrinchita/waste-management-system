@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #005A34;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links li a:hover{
+    color: rgb(207, 43, 43);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.register-btn {
+    background-color: white;
+    color: #005A34;
+    border-radius: 5px;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #005A34, #008C5E);
+    color: white;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #005A34;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* about us */
+
+.about{
+    background-color: orange;
+    text-align: center;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 15px;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 5px;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.plus-span{
+    background-color: orange;
+    margin-left: 1em;
+    padding: .2em;
+    height: 2em;
+    color: white;
+    border-radius: 2px;
+}
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #005A34;
+    color: white;
+}
+
+.cta .btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: #005A34;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #005A34;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 80%;
+    }
+
+    .nav-links {
+        display: none;
+        background-color: orange;
+        flex-direction: column;
+        width: 10em;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 46px;
+        padding: 1em 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
