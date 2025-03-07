@@ -326,3 +326,124 @@ form input {
         width: 95%;
     }
 }
+
+
+/* login page styling */
+
+/* Login Page Styles */
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #005A34;
+}
+
+.login-container p {
+    color: #333;
+}
+
+/* Social Media Buttons */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.google-btn, .facebook-btn, .twitter-btn {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.google-btn {
+    background-color: #db4437;
+}
+
+.facebook-btn {
+    background-color: #1877f2;
+}
+
+.twitter-btn {
+    background-color: #1da1f2;
+}
+
+/* Divider */
+.divider {
+    margin: 15px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Form Inputs */
+form input {
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #005A34;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    background-color: #008C5E;
+}
+
+/* Extra Links */
+.extra-links {
+    margin-top: 10px;
+}
+
+.forgot-password {
+    display: block;
+    color: #005A34;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.register-link {
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #005A34;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 95%;
+    }
+}
