@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Waste Management</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li class="active">Dashboard</li>
+                <li>Users</li>
+                <li>Waste Collection</li>
+                <li>Reports</li>
+                <li>Settings</li>
+                <li class="logout">Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <header>
+                <h1>Dashboard Overview</h1>
+            </header>
+
+            <section class="dashboard-stats">
+                <div class="stat-box">
+                    <h3>Total Users</h3>
+                    <p>250</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Completed Collections</h3>
+                    <p>1,200</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Pending Requests</h3>
+                    <p>75</p>
+                </div>
+            </section>
+
+            <section class="user-management">
+                <h2>Manage Users</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td><span class="active">Active</span></td>
+                            <td>
+                                <button class="block-btn">Block</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Jane Smith</td>
+                            <td>jane@example.com</td>
+                            <td><span class="pending">Pending</span></td>
+                            <td>
+                                <button class="approve-btn">Approve</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
