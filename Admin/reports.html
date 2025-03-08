@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="waste-collectors.html">Waste Collectors</a></li>
+                <li><a href="waste-collection.html">Waste Collection</a></li>
+                <li class="active"><a href="reports.html">Reports</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li class="logout">Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <header>
+                <h1>Waste Collection Reports</h1>
+            </header>
+
+            <!-- Total Waste Collected -->
+            <section class="report-card">
+                <h2>Total Waste Collected</h2>
+                <p><strong>12,500 kg</strong></p>
+            </section>
+
+            <!-- Most Active Waste Collectors -->
+            <section class="report-card">
+                <h2>Top Waste Collectors</h2>
+                <ul>
+                    <li>Michael Johnson - 350 pickups</li>
+                    <li>Sarah Adams - 310 pickups</li>
+                    <li>Robert Lee - 290 pickups</li>
+                </ul>
+            </section>
+
+            <!-- Most Active Resident Owners -->
+            <section class="report-card">
+                <h2>Top Resident Owners</h2>
+                <ul>
+                    <li>John Doe - 25 requests</li>
+                    <li>Jane Smith - 23 requests</li>
+                    <li>James Brown - 20 requests</li>
+                </ul>
+            </section>
+
+            <!-- Waste Collection Trends -->
+            <section class="report-chart">
+                <h2>Waste Collection Trends</h2>
+                <canvas id="wasteChart"></canvas>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

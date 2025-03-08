@@ -26,6 +26,9 @@ a{
     padding: 20px;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    left: 0;
 }
 
 .sidebar h2 {
@@ -56,10 +59,17 @@ a{
 }
 
 /* Main Dashboard Content */
+
+main{
+    width: 68em;
+    position: absolute;
+    right: 0;
+}
+
 .dashboard-content {
     flex: 1;
     padding: 20px;
-    background: #f5f5f5;
+    /* background: #f5f5f5; */
 }
 
 header h1 {
@@ -216,4 +226,40 @@ th {
 .completed {
     color: green;
     font-weight: bold;
+}
+
+/* reports page styling */
+
+/* Reports Section */
+.report-card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.report-card h2 {
+    margin-bottom: 10px;
+    color: #008C5E;
+}
+
+.report-card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.report-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.report-card ul li {
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+/* Chart Styling */
+.report-chart {
+    margin-top: 20px;
 }
