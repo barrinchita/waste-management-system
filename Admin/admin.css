@@ -6,6 +6,12 @@
     font-family: Arial, sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
 /* Dashboard Layout */
 .dashboard-container {
     display: flex;
@@ -164,4 +170,50 @@ button {
     table {
         font-size: 14px;
     }
+}
+
+/* waste collection file styling */
+
+/* Waste Collection Section */
+/* Waste Collection Section */
+.waste-collection {
+    margin-top: 20px;
+}
+
+.waste-collection h2 {
+    color: #005A34;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #008C5E;
+    color: white;
+}
+
+.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.in-progress {
+    color: blue;
+    font-weight: bold;
+}
+
+.completed {
+    color: green;
+    font-weight: bold;
 }
