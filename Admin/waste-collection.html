@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Collection - Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="waste-collectors.html">Waste Collectors</a></li>
+                <li class="active"><a href="waste-collection.html">Waste Collection</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li class="logout">Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <header>
+                <h1>Waste Collection Operations</h1>
+            </header>
+
+            <!-- Waste Collection Table -->
+            <section class="waste-collection">
+                <h2>Resident Requests</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Resident Owner</th>
+                            <th>Waste Collector</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#REQ001</td>
+                            <td>John Doe</td>
+                            <td>Michael Johnson</td>
+                            <td>Downtown</td>
+                            <td>March 10, 2025</td>
+                            <td><span class="pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>#REQ002</td>
+                            <td>Jane Smith</td>
+                            <td>Sarah Adams</td>
+                            <td>Green Valley</td>
+                            <td>March 11, 2025</td>
+                            <td><span class="in-progress">In Progress</span></td>
+                        </tr>
+                        <tr>
+                            <td>#REQ003</td>
+                            <td>James Brown</td>
+                            <td>Robert Lee</td>
+                            <td>Maple Street</td>
+                            <td>March 12, 2025</td>
+                            <td><span class="completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
