@@ -123,6 +123,11 @@ th {
     font-weight: bold;
 }
 
+.collector {
+    font-weight: bold;
+    color: #005A34;
+}
+
 /* Buttons */
 button {
     padding: 8px 12px;
