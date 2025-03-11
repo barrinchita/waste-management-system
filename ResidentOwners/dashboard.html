@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>WasteEase</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="collectors.html"><i class="fas fa-user-friends"></i> Waste Collectors</a></li>
+            <li><a href="request_pickup.html"><i class="fas fa-truck"></i> Request Pickup</a></li>
+            <li><a href="resident_history.html"><i class="fas fa-history"></i> Collection History</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li class="logout"><button> Logout</button></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <header>
+            <h1>Welcome, Resident</h1>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <i class="fas fa-user-friends"></i>
+                <h3>Waste Collectors</h3>
+                <p>Browse and subscribe to a waste collector for easy waste pickup.</p>
+                <a href="collectors.html" class="btn">View Collectors</a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-truck"></i>
+                <h3>Request Pickup</h3>
+                <p>Send a request to your waste collector to pick up your waste.</p>
+                <a href="request_pickup.html" class="btn">Request Pickup</a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-history"></i>
+                <h3>Collection History</h3>
+                <p>View past waste collection records and statuses.</p>
+                <a href="resident_history.html" class="btn">View History</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

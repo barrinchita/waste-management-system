@@ -1,0 +1,189 @@
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f7f7f7;
+    height: 100vh;
+}
+
+
+/* Buttons */
+button {
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.approve-btn {
+    background: green;
+    color: white;
+}
+
+.block-btn {
+    background: orange;
+    color: white;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #222831;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar .nav-links li {
+    padding: 12px 10px;
+}
+
+.sidebar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidebar .nav-links li a:hover {
+    background: #393E46;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar .nav-links i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar ul .logout {
+    margin-top: auto;
+    background: #ff4d4d;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 1em;
+}
+
+
+/* MAIN CONTENT */
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 20px;
+}
+
+header {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+}
+
+/* DASHBOARD CARDS */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 30px;
+    color: #00ADB5;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #00ADB5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #007B7F;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}
