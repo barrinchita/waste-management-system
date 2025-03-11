@@ -48,3 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// reports page js
+// Function to Send System-Wide Announcement
+function sendSystemAlert() {
+    const message = document.getElementById("admin-message").value;
+    if (message.trim() === "") {
+        alert("Please enter a message before sending.");
+    } else {
+        alert(`System Alert Sent: ${message}`);
+        document.getElementById("admin-message").value = ""; // Clear textarea
+    }
+}

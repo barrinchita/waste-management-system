@@ -263,3 +263,45 @@ th {
 .report-chart {
     margin-top: 20px;
 }
+
+/* Settings Page */
+.settings-card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.settings-card h2 {
+    margin-bottom: 10px;
+    color: #008C5E;
+}
+
+.settings-card label {
+    display: block;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.settings-card input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.settings-card button {
+    background: #008C5E;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.settings-card button:hover {
+    background: #00714C;
+}

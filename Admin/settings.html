@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - Admin Panel</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+          <li><a href="admin.html">Dashboard</a></li>
+          <li><a href="waste-collectors.html">Waste Collectors</a></li>
+          <li><a href="waste-collection.html">Waste Collection</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li class="active"><a href="settings.html">Settings</a></li>
+          <li class="logout">Logout</li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard-content">
+        <header>
+          <h1>Settings</h1>
+        </header>
+
+        <!-- Profile Settings -->
+        <section class="settings-card">
+          <h2>Profile Settings</h2>
+          <label for="admin-name">Admin Name:</label>
+          <input type="text" id="admin-name" value="Admin User" />
+
+          <label for="admin-email">Email:</label>
+          <input type="email" id="admin-email" value="admin@example.com" />
+
+          <label for="admin-password">New Password:</label>
+          <input type="password" id="admin-password" />
+
+          <button onclick="updateProfile()">Update Profile</button>
+        </section>
+
+        <!-- System Settings -->
+        <section class="settings-card">
+          <h2>System Settings</h2>
+          <label for="waste-requests">Enable Waste Collection Requests:</label>
+          <input type="checkbox" id="waste-requests" checked />
+        </section>
+
+        <!-- System-Wide Announcements -->
+        <section class="settings-card">
+          <h2>System Notifications</h2>
+          <label for="system-alerts">Enable system-wide alerts:</label>
+          <input type="checkbox" id="system-alerts" />
+
+          <label for="admin-message">Send Announcement:</label>
+          <textarea
+            id="admin-message"
+            placeholder="Type a message for all users..."
+          ></textarea>
+
+          <button onclick="sendSystemAlert()">Send Alert</button>
+        </section>
+
+        <!-- Theme Settings -->
+        <section class="settings-card">
+          <h2>Theme Settings</h2>
+          <label for="theme-toggle">Dark Mode:</label>
+          <input type="checkbox" id="theme-toggle" />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
