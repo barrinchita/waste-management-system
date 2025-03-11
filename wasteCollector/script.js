@@ -41,3 +41,27 @@ document.addEventListener("DOMContentLoaded", function () {
 function markAsCollected(name) {
     alert(`Pickup for ${name} has been marked as collected.`);
 }
+
+// subscribers js
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Subscribers Page Loaded!");
+
+    // Sample Data for Subscribed Residents
+    let subscribers = [
+        { name: "Alice Johnson", location: "Zone 5", date: "March 1, 2025" },
+        { name: "Bob Williams", location: "Zone 3", date: "February 28, 2025" }
+    ];
+
+    // Populate Subscribers List
+    let subscribersTable = document.getElementById("subscribers-list");
+    subscribers.forEach(subscriber => {
+        let row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${subscriber.name}</td>
+            <td>${subscriber.location}</td>
+            <td>${subscriber.date}</td>
+        `;
+        subscribersTable.appendChild(row);
+    });
+});
