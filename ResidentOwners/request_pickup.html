@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Waste Pickup</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Request Form Section */
+      .request-form {
+        text-align: center;
+        padding: 30px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: auto;
+        border-radius: 10px;
+      }
+
+      .request-form h2 {
+        margin-bottom: 15px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        text-align: left;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      textarea {
+        height: 80px;
+        resize: none;
+      }
+
+      .request-btn {
+        margin-top: 15px;
+        background-color: #28a745;
+        color: white;
+        font-size: 16px;
+      }
+
+      .request-btn:hover {
+        background-color: #218838;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 15px;
+        background: #222;
+        color: white;
+        margin-top: 20px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .request-form {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+          <li class="active"><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="waste-collectors.html">Waste Collectors</a></li>
+          <li><a href="waste-collection.html">Waste Collection</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li class="logout">Logout</li>
+        </ul>
+      </aside>
+
+      <main>
+        <!-- Hero Section -->
+        <section class="hero">
+          <h2>Request a Waste Pickup</h2>
+          <p>
+            Select a waste collector, choose a pickup date, and submit your
+            request.
+          </p>
+        </section>
+
+        <!-- Pickup Request Form -->
+        <section class="request-form">
+          <h2>Schedule a Pickup</h2>
+          <form id="pickupForm">
+            <label for="collector">Choose a Waste Collector:</label>
+            <select id="collector" required>
+              <option value="" disabled selected>Select a collector</option>
+              <option value="John Doe">John Doe - Downtown</option>
+              <option value="Jane Smith">Jane Smith - Uptown</option>
+              <option value="Mike Johnson">Mike Johnson - Suburbs</option>
+            </select>
+
+            <label for="date">Pickup Date:</label>
+            <input type="date" id="date" required />
+
+            <label for="time">Pickup Time:</label>
+            <input type="time" id="time" required />
+
+            <label for="notes">Additional Notes:</label>
+            <textarea
+              id="notes"
+              placeholder="Any extra instructions..."
+            ></textarea>
+
+            <button type="submit" class="request-btn">Submit Request</button>
+          </form>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+          <p>&copy; 2025 Waste Management System</p>
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
