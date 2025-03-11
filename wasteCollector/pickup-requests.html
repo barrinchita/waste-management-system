@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Requests</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="dashboard-dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Waste Collector</h2>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="subscribers.html">Subscribers</a></li>
+          <li><a href="pickup-requests.html">Pickup Requests</a></li>
+          <li class="active">
+            <a href="collection-history.html">Collection History</a>
+          </li>
+          <li><a href="profile.html">Profile</a></li>
+          <li class="logout">Logout</li>
+        </ul>
+      </aside>
+
+      <main>
+        <header>
+          <h1>Collection Requests</h1>
+          <a href="dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+        </header>
+
+        <section class="requests">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Resident Owner</th>
+                <th>Requested Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Alice Johnson</td>
+                <td>Feb 26, 2025</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>
+                  <button class="accept-btn">Accept</button>
+                  <button class="decline-btn">Decline</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Bob Williams</td>
+                <td>Mar 3, 2025</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>
+                  <button class="accept-btn">Accept</button>
+                  <button class="decline-btn">Decline</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Chris Evans</td>
+                <td>Mar 5, 2025</td>
+                <td><span class="status completed">Completed</span></td>
+                <td>
+                  <button class="accept-btn" disabled>Completed</button>
+                  <button class="decline-btn" disabled>Completed</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
