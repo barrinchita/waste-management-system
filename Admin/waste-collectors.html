@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Collectors - Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li class="active"><a href="waste-collectors.html">Waste Collectors</a></li>
+                <li><a href="waste-collection.html">Waste Collection</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li class="logout">Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <header>
+                <h1>Waste Collectors</h1>
+            </header>
+
+            <!-- Collectors Table -->
+            <section class="collectors-table">
+                <h2>Registered Waste Collectors</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="collectors-list">
+                        <!-- Collectors will be added dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Pending Approvals -->
+            <section class="pending-approvals">
+                <h2>Pending Approval</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pending-list">
+                        <!-- Pending collectors will be added dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

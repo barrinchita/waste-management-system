@@ -60,3 +60,66 @@ function sendSystemAlert() {
         document.getElementById("admin-message").value = ""; // Clear textarea
     }
 }
+
+// waste collectors page js
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Waste Collectors Page Loaded!");
+
+    // Sample Data (This should come from the database in a real system)
+    let registeredCollectors = [
+        { name: "John Doe", email: "john@example.com", status: "Active" },
+        { name: "Jane Smith", email: "jane@example.com", status: "Active" }
+    ];
+
+    let pendingCollectors = [
+        { name: "Michael Scott", email: "michael@example.com" },
+        { name: "Pam Beesly", email: "pam@example.com" }
+    ];
+
+    // Display Registered Collectors
+    let collectorsTable = document.getElementById("collectors-list");
+    registeredCollectors.forEach(collector => {
+        let row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${collector.name}</td>
+            <td>${collector.email}</td>
+            <td>${collector.status}</td>
+            <td><button class="reject-btn" onclick="removeCollector('${collector.email}')">Remove</button></td>
+        `;
+        collectorsTable.appendChild(row);
+    });
+
+    // Display Pending Collectors
+    let pendingTable = document.getElementById("pending-list");
+    pendingCollectors.forEach(collector => {
+        let row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${collector.name}</td>
+            <td>${collector.email}</td>
+            <td>
+                <button class="approve-btn" onclick="approveCollector('${collector.name}', '${collector.email}')">Approve</button>
+                <button class="reject-btn" onclick="rejectCollector('${collector.email}')">Reject</button>
+            </td>
+        `;
+        pendingTable.appendChild(row);
+    });
+});
+
+// Function to Approve a Waste Collector
+function approveCollector(name, email) {
+    alert(`${name} has been approved as a Waste Collector.`);
+    // Remove from pending list and add to registered list (in real case, update DB)
+}
+
+// Function to Reject a Waste Collector
+function rejectCollector(email) {
+    alert(`Waste Collector with email ${email} has been rejected.`);
+    // Remove from pending list (in real case, update DB)
+}
+
+// Function to Remove a Registered Collector
+function removeCollector(email) {
+    alert(`Waste Collector with email ${email} has been removed.`);
+    // Remove from registered list (in real case, update DB)
+}

@@ -305,3 +305,53 @@ th {
 .settings-card button:hover {
     background: #00714C;
 }
+
+/* waste collectors page styling */
+
+/* Collectors Table */
+.collectors-table, .pending-approvals {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.collectors-table h2, .pending-approvals h2 {
+    margin-bottom: 10px;
+    color: #008C5E;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #008C5E;
+    color: white;
+}
+
+td button {
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.approve-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+    color: white;
+}
