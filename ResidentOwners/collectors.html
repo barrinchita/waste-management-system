@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Collectors</title>
+
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      .backBtn{
+        position: absolute;
+        top: 1em;
+        left: 1em;
+      }
+
+      /* Header */
+      header {
+        background-color: #004d00;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      button {
+        background-color: #ffa500;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #ff8c00;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 50px;
+        background-color: #007700;
+        color: white;
+      }
+
+      /* Collectors Section */
+      .collectors {
+        text-align: center;
+        padding: 30px;
+      }
+
+      .collectors-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .collector {
+        background: white;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 250px;
+      }
+
+      .collector img {
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .subscribe-btn {
+        background-color: #28a745;
+        color: white;
+      }
+
+      .subscribe-btn:hover {
+        background-color: #218838;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 15px;
+        background: #222;
+        color: white;
+        margin-top: 20px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .collectors-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <button class="backBtn"><span> < </span></button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Find and Subscribe to a Waste Collector</h2>
+      <p>
+        Browse through the list of available waste collectors and choose the one
+        that best fits your needs.
+      </p>
+    </section>
+
+    <!-- Collectors List -->
+    <section class="collectors">
+      <h2>Available Waste Collectors</h2>
+      <div class="collectors-container">
+        <!-- Collector 1 -->
+        <div class="collector">
+          <img src="collector1.jpg" alt="Collector 1" />
+          <h3>John Doe</h3>
+          <p>Service Area: Downtown</p>
+          <p>⭐ 4.8 (200 reviews)</p>
+          <button class="subscribe-btn" onclick="subscribe('John Doe')">
+            Subscribe
+          </button>
+        </div>
+
+        <!-- Collector 2 -->
+        <div class="collector">
+          <img src="collector2.jpg" alt="Collector 2" />
+          <h3>Jane Smith</h3>
+          <p>Service Area: Uptown</p>
+          <p>⭐ 4.5 (180 reviews)</p>
+          <button class="subscribe-btn" onclick="subscribe('Jane Smith')">
+            Subscribe
+          </button>
+        </div>
+
+        <!-- Collector 3 -->
+        <div class="collector">
+          <img src="collector3.jpg" alt="Collector 3" />
+          <h3>Mike Johnson</h3>
+          <p>Service Area: Suburbs</p>
+          <p>⭐ 4.7 (150 reviews)</p>
+          <button class="subscribe-btn" onclick="subscribe('Mike Johnson')">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Waste Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
