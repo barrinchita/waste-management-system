@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard_container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Profile</h2>
+        <ul>
+          <li>
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+          <li><a href="subscribers.html">Subscribers</a></li>
+          <li><a href="pickup-requests.html">Pickup Requests</a></li>
+          <li><a href="collection-history.html">Collection History</a></li>
+          <li class="active"><a href="profile.html">Profile</a></li>
+          <li class="logout">Logout</li>
+        </ul>
+      </aside>
+
+      <main>
+        <header>
+          <h1>Profile Settings</h1>
+          <a href="dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+        </header>
+
+        <section class="profile-settings">
+          <form action="#">
+            <div class="input-group">
+              <label for="name">Full Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value="John Doe"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="location">Location:</label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                value="Downtown"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value="john.doe@example.com"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value="123-456-7890"
+                required
+              />
+            </div>
+            <button type="submit" class="btn">Save Changes</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
