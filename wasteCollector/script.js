@@ -65,3 +65,27 @@ document.addEventListener("DOMContentLoaded", function () {
         subscribersTable.appendChild(row);
     });
 });
+
+// pickup requests js
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Notifications Page Loaded!");
+
+    // Sample Notifications
+    let notifications = [
+        { message: "New pickup request from Alice Johnson.", time: "2 hours ago" },
+        { message: "You have a new subscriber: Bob Williams.", time: "1 day ago" },
+        { message: "Admin: System maintenance scheduled for March 10.", time: "3 days ago" }
+    ];
+
+    // Populate Notification List
+    let notificationList = document.getElementById("notification-list");
+    notifications.forEach(notification => {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = `
+            <p>${notification.message}</p>
+            <small>${notification.time}</small>
+        `;
+        notificationList.appendChild(listItem);
+    });
+});
