@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Collector Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Waste Collector</h2>
+            <ul>
+                <li class="active"><a href="waste-collector-dashboard.html">Dashboard</a></li>
+                <li><a href="pickup-requests.html">Pickup Requests</a></li>
+                <li><a href="collection-history.html">Collection History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li class="logout">Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <header>
+                <h1>Welcome, Collector</h1>
+                <p>Manage your pickups efficiently.</p>
+            </header>
+
+            <!-- Pickup Requests Section -->
+            <section class="requests">
+                <h2>Pending Pickup Requests</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resident Name</th>
+                            <th>Location</th>
+                            <th>Date Requested</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pickup-list">
+                        <!-- Requests added dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Collection History -->
+            <section class="history">
+                <h2>Collection History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resident Name</th>
+                            <th>Location</th>
+                            <th>Date Collected</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-list">
+                        <!-- Collection history added dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
