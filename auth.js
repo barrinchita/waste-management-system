@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        const response = await fetch("./Backend/auth1/login.php", {
+        const response = await fetch("http://localhost:80/waste management system/Backend/auth1/login.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })

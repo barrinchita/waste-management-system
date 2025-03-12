@@ -6,7 +6,6 @@
     <title>Register - Waste Management System</title>
     <link rel="stylesheet" href="style.css" />
     <!-- <script src="./auth.js"></script> -->
-
   </head>
   <body>
     <div class="register-container">
@@ -40,31 +39,44 @@
       </p>
     </div>
 
-    
     <script>
-        document
-          .getElementById("signupForm")
-          ?.addEventListener("submit", async (e) => {
-            e.preventDefault();
-  
-            const full_name = document.getElementById("full_name").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const user_type = document.getElementById("user_type").value;
-  
-            console.log(full_name, " ", email, " ", password, " ");
-  
-            const response = await fetch("./Backend/auth1/signup.php", {
+      document
+        .getElementById("signupForm")
+        ?.addEventListener("submit", async (e) => {
+          e.preventDefault(); // Prevent default form submission
+
+          const full_name = document.getElementById("full_name").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const user_type = document.getElementById("user_type").value;
+
+          try {
+            const response = await fetch("http://localhost:80/waste management system/Backend/auth1/singup.php", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ full_name, email, password, user_type }),
             });
-  
-            const result = await response.json();
-            alert(result.message);
-            if (result.status === "success") window.location.href = "login.html";
-          });
-      </script>
 
+            const text = await response.text(); // Get raw response first
+            console.log("Raw response:", text); // Log response
+
+            let result;
+            try {
+              result = JSON.parse(text); // Try parsing JSON
+            } catch (error) {
+              alert("Server error: Invalid response format");
+              console.error("JSON Parse Error:", error, "Response:", text);
+              return;
+            }
+
+            alert(result.message);
+            if (result.status === "success")
+              window.location.href = "login.html";
+          } catch (err) {
+            console.error("Fetch error:", err);
+            alert("Network error. Try again later.");
+          }
+        });
+    </script>
   </body>
 </html>
