@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = document.getElementById("password").value;
         const user_type = document.getElementById("user_type").value;
 
-        const response = await fetch("./Backend/signup.php", {
+        console.log(full_name, " ", email, " ", password, " ");
+
+        const response = await fetch("./Backend/auth1/signup.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ full_name, email, password, user_type })
