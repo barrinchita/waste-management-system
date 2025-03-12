@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register - Waste Management System</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="./auth.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="./auth.js"></script> -->
 
+  </head>
+  <body>
     <div class="register-container">
-        <h2>Create an Account</h2>
-        <p>Join us in keeping the environment clean.</p>
+      <h2>Create an Account</h2>
+      <p>Join us in keeping the environment clean.</p>
 
-        <!-- Social Media Signup -->
-        <div class="social-buttons">
-            <button class="google-btn">Sign up with Google</button>
-            <button class="facebook-btn">Sign up with Facebook</button>
-            <button class="twitter-btn">Sign up with Twitter</button>
-        </div>
+      <!-- Social Media Signup -->
+      <div class="social-buttons">
+        <button class="google-btn">Sign up with Google</button>
+        <button class="facebook-btn">Sign up with Facebook</button>
+        <button class="twitter-btn">Sign up with Twitter</button>
+      </div>
 
-        <div class="divider">OR</div>
+      <div class="divider">OR</div>
 
-        <!-- Registration Form -->
-        <form id="signupForm">
-            <input type="text" id="full_name" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <select id="user_type">
-                <option value="resident_owner">Resident Owner</option>
-                <option value="waste_collector">Waste Collector</option>
-            </select>
-            <br><br>
-            <button type="submit" class="register-btn">Register</button>
-        </form>
-        
+      <!-- Registration Form -->
+      <form id="signupForm">
+        <input type="text" id="full_name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <select id="user_type">
+          <option value="resident_owner">Resident Owner</option>
+          <option value="waste_collector">Waste Collector</option>
+        </select>
+        <br /><br />
+        <button class="register-btn">Register</button>
+      </form>
 
-        <p class="login-link">Already have an account? <a href="./login.html">Login here</a></p>
+      <p class="login-link">
+        Already have an account? <a href="./login.html">Login here</a>
+      </p>
     </div>
 
-</body>
+    
+    <script>
+        document
+          .getElementById("signupForm")
+          ?.addEventListener("submit", async (e) => {
+            e.preventDefault();
+  
+            const full_name = document.getElementById("full_name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const user_type = document.getElementById("user_type").value;
+  
+            console.log(full_name, " ", email, " ", password, " ");
+  
+            const response = await fetch("./Backend/auth1/signup.php", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ full_name, email, password, user_type }),
+            });
+  
+            const result = await response.json();
+            alert(result.message);
+            if (result.status === "success") window.location.href = "login.html";
+          });
+      </script>
+
+  </body>
 </html>
