@@ -38,7 +38,7 @@
 
     <script>
       document
-        .getElementById("login-btn")
+        .getElementById("loginForm")
         .addEventListener("click", async function (e) {
           e.preventDefault();
 
@@ -49,7 +49,7 @@
           formData.append("email", email);
           formData.append("password", password);
 
-          let response = await fetch("login.php", {
+          let response = await fetch("http://localhost:80/waste management system/Backend/auth1/login.php", {
             method: "POST",
             body: formData,
           });
