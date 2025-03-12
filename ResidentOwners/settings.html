@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <h2>WasteEase</h2>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="./dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        </li>
+        <li>
+          <a href="collectors.html"
+            ><i class="fas fa-user-friends"></i> Waste Collectors</a
+          >
+        </li>
+        <li>
+          <a href="request_pickup.html"
+            ><i class="fas fa-truck"></i> Request Pickup</a
+          >
+        </li>
+        <li>
+          <a href="resident_history.html"
+            ><i class="fas fa-history"></i> Collection History</a
+          >
+        </li>
+        <li>
+          <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+        </li>
+        <li class="logout"><button>Logout</button></li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- Settings Section -->
+      <section class="settings">
+        <h2>Account Settings</h2>
+
+        <!-- Profile Update -->
+        <div class="settings-box">
+          <h3>Update Profile</h3>
+          <form>
+            <label>Email:</label>
+            <input type="email" placeholder="Enter new email" required />
+            <label>Password:</label>
+            <input type="password" placeholder="Enter new password" required />
+            <button class="settingsBtn" type="submit">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Notification Settings -->
+        <div class="settings-box">
+          <h3>Notification Preferences</h3>
+          <label>
+            <input type="checkbox" id="emailNotifications" /> Enable Email
+            Notifications
+          </label>
+          <label>
+            <input type="checkbox" id="smsNotifications" /> Enable SMS
+            Notifications
+          </label>
+        </div>
+
+        <!-- Subscription Management -->
+        <div class="settings-box">
+          <h3>Subscription</h3>
+          <p>
+            Current Waste Collector:
+            <strong id="currentCollector">John Doe</strong>
+          </p>
+          <button class="settingsBtn"  class="unsubscribe-btn">Unsubscribe</button>
+        </div>
+
+        <!-- Delete Account -->
+        <div class="settings-box delete-box">
+          <h3>Danger Zone</h3>
+          <button class="settingsBtn"  class="delete-account-btn">Delete My Account</button>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 Waste Management System</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
