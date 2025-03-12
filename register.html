@@ -22,13 +22,20 @@
         <div class="divider">OR</div>
 
         <!-- Registration Form -->
-        <form action="#" method="POST">
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
+        <form id="signupForm">
+            <input type="text" id="full_name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <select id="user_type">
+                <option value="resident_owner">Resident Owner</option>
+                <option value="waste_collector">Waste Collector</option>
+            </select>
+            <br><br>
             <button type="submit" class="register-btn">Register</button>
         </form>
+        
 
-        <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+        <p class="login-link">Already have an account? <a href="./login.html">Login here</a></p>
     </div>
 
 </body>
