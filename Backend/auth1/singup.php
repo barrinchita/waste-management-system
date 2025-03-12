@@ -1,5 +1,5 @@
 <?php
-require_once './backend/config.php';
+require_once './config.php';
 
 // Get POST data from Fetch API
 $data = json_decode(file_get_contents("php://input"), true);
