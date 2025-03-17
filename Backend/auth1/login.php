@@ -1,6 +1,6 @@
 <?php
 session_start();  // Start the session
-require 'config.php'; // Ensure you have your database connection
+require 'config.php'; // database connection
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"]);
@@ -33,8 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 case 'waste_collector':
                     echo json_encode(["status" => "success", "redirect" => "waste-collector/dashboard.php"]);
                     break;
-                case 'resident':
-                    echo json_encode(["status" => "success", "redirect" => "resident/dashboard.php"]);
+                case 'resident_owner':
+                    echo json_encode(["status" => "success", "redirect" => "./ResidentOwners/dashboard.html"]);
                     break;
                 default:
                     echo json_encode(["status" => "error", "message" => "Invalid user role"]);
